@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WANGIAN MARHAEN</title>
+
+<style>
+:root {
+    --gold: #D4AF37;
+    --gold-dark: #B8941F;
+    --black: #0f0f0f;
+    --white: #ffffff;
+    --gray-light: #cccccc;
+}
+
+/* Global */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Montserrat',sans-serif; background-color:var(--black); color:var(--white); line-height:1.6; scroll-behavior: smooth;}
+a { text-decoration:none; color:inherit; }
+
+/* Navbar */
+.navbar { position:fixed; top:0; left:0; right:0; padding:1rem 5%; display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.8); z-index:1000; }
+.logo { font-family:'Cormorant Garamond', serif; font-size:1.5rem; font-weight:bold; color:var(--gold); }
+.nav-links { display:flex; gap:2rem; list-style:none; }
+.nav-links a:hover { color:var(--gold-dark); }
+
+/* Hero */
+.hero { min-height:90vh; display:flex; justify-content:center; align-items:center; text-align:center; padding:100px 5% 50px; background: linear-gradient(135deg,#111 0%,#222 100%);}
+.hero h1 { font-family:'Cormorant Garamond', serif; font-size:3rem; margin-bottom:1rem; color:var(--gold);}
+.hero p { font-size:1.1rem; margin-bottom:1.5rem; color:var(--gray-light);}
+.btn {
+    padding:0.8rem 2rem;
+    background:var(--gold);
+    color:var(--black);
+    font-weight:bold;
+    transition: all 0.2s ease;
+    display:inline-block;
+    position:relative;
+}
+.btn:hover { background:transparent; color:var(--gold-dark); border:1px solid var(--gold-dark);}
+.btn:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+}
+
+/* Sections fade-in */
+section { opacity:0; transform: translateY(30px); transition: all 0.8s ease; }
+section.active { opacity:1; transform: translateY(0); }
+
+/* Collections */
+.collections { padding:80px 5%; text-align:center; }
+.collections h2 { font-size:2rem; margin-bottom:2rem; color:var(--gold); }
+.products-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem;}
+.product-card { background:#1a1a1a; padding:1.5rem; border-radius:5px; transition: transform 0.3s ease; cursor:pointer; }
+.product-card:hover { transform: translateY(-5px); }
+.product-card img { width:100%; margin-bottom:1rem; }
+.product-card h3 { margin-bottom:0.5rem; color:var(--gold); }
+.product-card p { margin-bottom:0.8rem; color:var(--gray-light); }
+
+/* Story */
+.story { padding:80px 5%; display:flex; gap:2rem; flex-wrap:wrap; align-items:center; }
+.story img { max-width:400px; border-radius:5px; flex:1; }
+.story-content { flex:1; }
+.story-content h2 { color:var(--gold); margin-bottom:1rem; }
+.story-content p { margin-bottom:1rem; color:var(--gray-light); }
+
+/* Features */
+.features { padding:80px 5%; text-align:center; }
+.features h2 { color:var(--gold); margin-bottom:2rem; }
+.features-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:2rem; }
+.feature { padding:1rem; background:#1a1a1a; border-radius:5px; }
+.feature h3 { margin-bottom:0.5rem; color:var(--gold); }
+.feature p { color:var(--gray-light); }
+
+/* Newsletter */
+.newsletter { padding:60px 5%; background:#111; text-align:center; }
+.newsletter input { padding:0.8rem; width:250px; margin-right:1rem; border:none; border-radius:3px; }
+.newsletter button { padding:0.8rem 1.5rem; background:var(--gold); border:none; font-weight:bold; cursor:pointer; transition: transform 0.2s ease; }
+.newsletter button:active { transform:scale(0.95); }
+
+/* Footer */
+.footer { background:#111; color:var(--gray-light); padding:40px 5%; text-align:center; }
+
+/* Responsive */
+@media(max-width:768px){
+    .story { flex-direction:column; text-align:center; }
+    .products-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <a href="#" class="logo">WANGIAN MARHAEN</a>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="Collection.html">Collections</a></li>
+        <li><a href="Story.html">Our Story</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <div>
+        <h1>WANGIAN MARHAEN</h1>
+        <p>Temui wangian signature anda</p>
+        <a href="#collections" class="btn">Explore Collection</a>
+    </div>
+</section>
+
+<!-- Collections -->
+<section class="collections" id="collections">
+    <h2>Signature Fragrances</h2>
+    <div class="products-grid">
+        <div class="product-card">
+            <img src="vegabond (wallpapper).png" alt="Golden Essence">
+            <h3>Golden Essence</h3>
+            <p>Amber • Vanilla • Sandalwood</p>
+            <p>$285</p>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250x300" alt="Midnight Rose">
+            <h3>Midnight Rose</h3>
+            <p>Rose • Oud • Musk</p>
+            <p>$320</p>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250x300" alt="Crystal Bloom">
+            <h3>Crystal Bloom</h3>
+            <p>Jasmine • Bergamot • White Tea</p>
+            <p>$295</p>
+        </div>
+                <div class="product-card">
+            <img src="https://via.placeholder.com/250x300" alt="Crystal Bloom">
+            <h3>Crystal Bloom</h3>
+            <p>Jasmine • Bergamot • White Tea</p>
+            <p>$295</p>
+        </div>
+                <div class="product-card">
+            <img src="https://via.placeholder.com/250x300" alt="Crystal Bloom">
+            <h3>Crystal Bloom</h3>
+            <p>Jasmine • Bergamot • White Tea</p>
+            <p>$295</p>
+        </div>
+                <div class="product-card">
+            <img src="https://via.placeholder.com/250x300" alt="Crystal Bloom">
+            <h3>Crystal Bloom</h3>
+            <p>Jasmine • Bergamot • White Tea</p>
+            <p>$295</p>
+        </div>
+                <div class="product-card">
+            <img src="https://via.placeholder.com/250x300" alt="Crystal Bloom">
+            <h3>Crystal Bloom</h3>
+            <p>Jasmine • Bergamot • White Tea</p>
+            <p>$295</p>
+        </div>
+                <div class="product-card">
+            <img src="https://via.placeholder.com/250x300" alt="Crystal Bloom">
+            <h3>Crystal Bloom</h3>
+            <p>Jasmine • Bergamot • White Tea</p>
+            <p>$295</p>
+        </div>
+                <div class="product-card">
+            <img src="https://via.placeholder.com/250x300" alt="Crystal Bloom">
+            <h3>Crystal Bloom</h3>
+            <p>Jasmine • Bergamot • White Tea</p>
+            <p>$295</p>
+        </div>
+                <div class="product-card">
+            <img src="https://via.placeholder.com/250x300" alt="Crystal Bloom">
+            <h3>Crystal Bloom</h3>
+            <p>Jasmine • Bergamot • White Tea</p>
+            <p>$295</p>
+        </div>
+                <div class="product-card">
+            <img src="https://via.placeholder.com/250x300" alt="Crystal Bloom">
+            <h3>Crystal Bloom</h3>
+            <p>Jasmine • Bergamot • White Tea</p>
+            <p>$295</p>
+        </div>
+                <div class="product-card">
+            <img src="https://via.placeholder.com/250x300" alt="Crystal Bloom">
+            <h3>Crystal Bloom</h3>
+            <p>Jasmine • Bergamot • White Tea</p>
+            <p>$295</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Story -->
+<section class="story" id="story">
+    <img src="https://via.placeholder.com/400x400" alt="Our Story">
+    <div class="story-content">
+        <h2>The Art of Perfumery</h2>
+        <p>Founded in 1985, WANGIAN MARHAEN crafts exceptional fragrances combining tradition and modern innovation.</p>
+        <p>Every fragrance is a journey through carefully selected ingredients from the world's most prestigious regions.</p>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="features" id="features">
+    <h2>The WANGIAN Difference</h2>
+    <div class="features-grid">
+        <div class="feature">
+            <h3>Premium Ingredients</h3>
+            <p>Ensuring exceptional quality and longevity.</p>
+        </div>
+        <div class="feature">
+            <h3>Long-Lasting Formula</h3>
+            <p>Fragrance stays with you throughout the day.</p>
+        </div>
+        <div class="feature">
+            <h3>Cruelty-Free</h3>
+            <p>No animal testing at any stage of production.</p>
+        </div>
+        <div class="feature">
+            <h3>Free Shipping</h3>
+            <p>Complimentary worldwide shipping over $150.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter" id="contact">
+    <h2>Join Our World</h2>
+    <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2024 WANGIAN MARHAEN. All rights reserved.</p>
+</footer>
+
+<script>
+// Scroll fade-in effect
+const sections = document.querySelectorAll('section');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold:0.1 });
+sections.forEach(section => observer.observe(section));
+
+// Button click animation is handled by CSS scale effect (:active)
+// Smooth scroll handled by scroll-behavior in CSS
+</script>
+
+</body>
+</html>

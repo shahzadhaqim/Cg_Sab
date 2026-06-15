@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WANGIAN MARHAEN - Our Story</title>
+
+<style>
+:root {
+    --gold: #D4AF37;
+    --gold-dark: #B8941F;
+    --black: #0f0f0f;
+    --white: #ffffff;
+    --gray-light: #cccccc;
+}
+
+/* Global */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Montserrat',sans-serif; background-color:var(--black); color:var(--white); line-height:1.6; scroll-behavior:smooth;}
+a { text-decoration:none; color:inherit; }
+
+/* Navbar */
+.navbar { position:fixed; top:0; left:0; right:0; padding:1rem 5%; display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.85); z-index:1000; }
+.logo { font-family:'Cormorant Garamond', serif; font-size:1.5rem; font-weight:bold; color:var(--gold); }
+.nav-links { display:flex; gap:2rem; list-style:none; }
+.nav-links a:hover { color:var(--gold-dark); }
+
+/* Hero */
+.hero { min-height:50vh; display:flex; justify-content:center; align-items:center; text-align:center; padding:100px 5% 50px; background: linear-gradient(135deg,#111 0%,#222 100%);}
+.hero h1 { font-family:'Cormorant Garamond', serif; font-size:3rem; margin-bottom:1rem; color:var(--gold);}
+.hero p { font-size:1.2rem; margin-bottom:1.5rem; color:var(--gray-light);}
+.btn {
+    padding:0.8rem 2rem;
+    background:var(--gold);
+    color:var(--black);
+    font-weight:bold;
+    transition: all 0.2s ease;
+    display:inline-block;
+    position:relative;
+}
+.btn:hover { background:transparent; color:var(--gold-dark); border:1px solid var(--gold-dark);}
+.btn:active { transform: scale(0.95); transition: transform 0.1s ease; }
+
+/* Sections fade-in */
+section { opacity:0; transform: translateY(30px); transition: all 0.8s ease; }
+section.active { opacity:1; transform: translateY(0); }
+
+/* Story Section */
+.story-page { padding:100px 5% 50px; display:flex; flex-direction:column; gap:6rem; }
+.story-block { display:flex; gap:2rem; flex-wrap:wrap; align-items:center; }
+.story-block img { max-width:400px; border-radius:10px; flex:1; }
+.story-content { flex:1; }
+.story-content h2 { color:var(--gold); margin-bottom:1rem; font-size:2rem; }
+.story-content p { margin-bottom:1rem; color:var(--gray-light); font-size:1.1rem; }
+
+/* Features & Fun Facts */
+.fun-facts { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem; margin-top:2rem;}
+.fact { background:#1a1a1a; padding:1.5rem; border-radius:5px; text-align:center; }
+.fact h3 { color:var(--gold); margin-bottom:0.5rem; }
+.fact p { color:var(--gray-light); }
+
+/* Footer */
+.footer { background:#111; color:var(--gray-light); padding:40px 5%; text-align:center; }
+
+/* Responsive */
+@media(max-width:768px){
+    .story-block { flex-direction:column; text-align:center; }
+    .story-block img { max-width:100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <a href="index.html" class="logo">WANGIAN MARHAEN</a>
+    <ul class="nav-links">
+        <li><a href="test.html">Home</a></li>
+        <li><a href="Collection.html">Collections</a></li>
+        <li><a href="Story.html">Our Story</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div>
+        <h1>Our Story</h1>
+        <p>Perjalanan WANGIAN MARHAEN dari impian ke keharuman dunia</p>
+    </div>
+</section>
+
+<!-- Story Content -->
+<section class="story-page" id="story">
+    <div class="story-block">
+        <img src="https://via.placeholder.com/400x400" alt="Founding">
+        <div class="story-content">
+            <h2>Founded in 1985</h2>
+            <p>WANGIAN MARHAEN was established with a mission to craft fragrances that tell a story. Our founder envisioned perfumes that embody elegance, passion, and uniqueness.</p>
+        </div>
+    </div>
+
+    <div class="story-block">
+        <div class="story-content">
+            <h2>Craftsmanship & Ingredients</h2>
+            <p>Each fragrance is composed using premium ingredients sourced from around the world. Our expert perfumers blend tradition with modern innovation to create signature scents.</p>
+        </div>
+        <img src="https://via.placeholder.com/400x400" alt="Crafting">
+    </div>
+
+    <div class="story-block">
+        <img src="https://via.placeholder.com/400x400" alt="Global Presence">
+        <div class="story-content">
+            <h2>Global Presence</h2>
+            <p>Today, our fragrances reach perfumery enthusiasts worldwide. Every bottle tells a journey—from inspiration to creation, capturing the essence of WANGIAN MARHAEN.</p>
+        </div>
+    </div>
+
+    <!-- Fun Facts -->
+    <div class="fun-facts">
+        <div class="fact">
+            <h3>500+</h3>
+            <p>Signature Bottles Created</p>
+        </div>
+        <div class="fact">
+            <h3>20+</h3>
+            <p>Countries Reached</p>
+        </div>
+        <div class="fact">
+            <h3>100%</h3>
+            <p>Cruelty-Free</p>
+        </div>
+        <div class="fact">
+            <h3>150K+</h3>
+            <p>Happy Customers</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2024 WANGIAN MARHAEN. All rights reserved.</p>
+</footer>
+
+<script>
+// Scroll fade-in effect
+const sections = document.querySelectorAll('section, .story-block, .fun-facts');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) { entry.target.classList.add('active'); }
+    });
+}, { threshold:0.1 });
+sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
